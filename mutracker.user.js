@@ -28,10 +28,10 @@
 // @updateURL      https://github.com/cantzler/iitc-user-plugins/raw/master/mutracker.user.js
 // @downloadURL    https://github.com/cantzler/iitc-user-plugins/raw/master/mutracker.user.js
 // @description    [steeltoad-2015-04-09-2045] Modified version of player tracker that also tracks mu of fields created or destroyed. Does not request chat data on its own, even if that would be useful.
-// @include        https://www.ingress.com/intel*
-// @include        http://www.ingress.com/intel*
-// @match          https://www.ingress.com/intel*
-// @match          http://www.ingress.com/intel*
+// @include        https://*.ingress.com/intel*
+// @include        http://*.ingress.com/intel*
+// @match          https://*.ingress.com/intel*
+// @match          http://*.ingress.com/intel*
 // @grant          none
 // ==/UserScript==
 
@@ -51,7 +51,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 
 // PLUGIN START ////////////////////////////////////////////////////////
 window.MU_TRACKER_MAX_EVENT_TIME = 3*60*60*1000; // in milliseconds  (Ray)  renamed for clarity
-window.MU_TRACKER_MAX_FIELD_TIME = 6*60*60*1000; // in milliseconds  (Ray)  separate time limit for checking fields
+window.MU_TRACKER_MAX_FIELD_TIME = 9*60*60*1000; // in milliseconds  (Ray)  separate time limit for checking fields
 window.MU_TRACKER_MAX_EVENT_DISPLAY = 10;        // (Ray) number of event lines to display in popup
 window.MU_TRACKER_MAX_FIELD_DISPLAY = 20;        // (Ray) number of field lines to display in popup
 window.MU_TRACKER_MIN_ZOOM = 9;
